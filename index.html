@@ -1,0 +1,430 @@
+:root {
+            --primary-color: #FFFFFF; /* Blanco para elementos primarios como el título */
+            --secondary-color: #FFFFFF; /* Blanco para elementos secundarios como enlaces */
+            --background-dark: #6495ED; /* Azul medio como fondo oscuro principal (color predominante) */
+            --background-dark-secondary: #ADD8E6; /* Un azul más claro como fondo oscuro secundario (un tono más claro del azul principal) */
+            --text-light: #FFFFFF; /* Blanco para el texto claro */
+            --text-medium: #E0FFFF; /* Un tono muy claro de azul para texto secundario */
+            --spacing-small: 0.5rem;
+            --spacing-medium: 1rem;
+            --spacing-large: 1.5rem;
+            --border-radius-small: 5px;
+            --border-radius-medium: 8px;
+            --font-size-regular: 1rem;
+            --font-size-large: 1.1rem;
+            --font-size-h2: 2rem;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--background-dark-secondary);
+            padding: var(--spacing-medium);
+            text-align: center;
+        }
+
+        header img {
+            width: 100px;
+            margin-bottom: var(--spacing-small);
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: var(--spacing-medium);
+            background-color: #1E90FF; /* Un tono de azul ligeramente diferente para la navegación */
+            padding: var(--spacing-small) 0;
+        }
+
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: var(--spacing-small) var(--spacing-medium);
+            border-radius: var(--border-radius-small);
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin: 0 var(--spacing-small);
+        }
+
+        nav a:hover {
+            background-color: #4682B4; /* Un tono más oscuro al pasar el mouse */
+        }
+
+        section {
+            padding: var(--spacing-large);
+            text-align: center;
+        }
+
+        section h2 {
+            color: var(--secondary-color);
+            font-size: var(--font-size-h2);
+            margin-bottom: var(--spacing-medium);
+        }
+
+        #nosotros p {
+            font-size: var(--font-size-large);
+            margin-bottom: var(--spacing-large);
+            color: var(--text-medium);
+            line-height: 1.7;
+        }
+
+        #nosotros strong {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .ventajas-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: var(--spacing-large);
+            margin-bottom: var(--spacing-small);
+        }
+
+        ul.ventajas {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-medium);
+        }
+
+        ul.ventajas li {
+            font-size: var(--font-size-regular);
+            display: flex;
+            align-items: center;
+            background-color: #87CEFA; /* Un tono claro de azul para los elementos */
+            color: var(--primary-color);
+            padding: var(--spacing-medium);
+            border-radius: var(--border-radius-medium);
+            width: fit-content;
+        }
+
+        ul.ventajas li i {
+            color: var(--secondary-color);
+            margin-right: var(--spacing-small);
+            font-size: 1.2rem;
+        }
+
+        .catalogo {
+            text-align: center;
+        }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--spacing-medium);
+            justify-content: center;
+            margin-top: var(--spacing-medium);
+        }
+
+        .producto-cuadro {
+            border: 1px solid #ADD8E6; /* Borde azul claro */
+            border-radius: var(--border-radius-medium);
+            overflow: hidden;
+            background-color: #E0FFFF; /* Fondo azul muy claro */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .producto-cuadro:hover {
+            transform: scale(1.05);
+        }
+
+        .producto-cuadro img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .redes {
+            text-align: center;
+        }
+
+        .redes h2 {
+            margin-bottom: var(--spacing-medium);
+            color: var(--primary-color);
+        }
+
+        .redes a {
+            margin: 0 var(--spacing-medium);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .redes a:hover {
+            color: #87CEFA; /* Un tono de azul al pasar el mouse */
+        }
+
+        .redes i {
+            margin-right: var(--spacing-small);
+        }
+
+        .precios table {
+            margin: var(--spacing-large) auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 600px;
+            border-radius: var(--border-radius-medium);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            font-size: var(--font-size-regular);
+            background-color: #B0E0E6; /* Fondo azul claro para la tabla */
+            color: #191970; /* Texto azul oscuro para la tabla */
+        }
+
+        .precios th, .precios td {
+            border: 1px solid #ADD8E6; /* Borde azul claro */
+            padding: var(--spacing-medium);
+            text-align: center;
+        }
+
+        .precios th {
+            background-color: #87CEFA; /* Encabezado azul claro */
+            color: var(--primary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .precios tr:nth-child(even) {
+            background-color: #ADD8E6; /* Filas pares azul claro */
+        }
+
+        .precios tr:last-child td {
+            border-bottom: none;
+        }
+
+        .precios caption {
+            padding: var(--spacing-small);
+            font-size: var(--font-size-small);
+            color: #4682B4; /* Texto azul más oscuro para la leyenda */
+            text-align: center;
+            margin-bottom: var(--spacing-small);
+        }
+
+        .contacto {
+            text-align: center;
+        }
+
+        .contacto h2 {
+            margin-bottom: var(--spacing-medium);
+            color: var(--primary-color);
+        }
+
+        .contacto a {
+            color: var(--background-dark); /* Texto azul para el botón */
+            background-color: var(--primary-color); /* Fondo blanco para el botón */
+            padding: var(--spacing-medium) var(--spacing-large);
+            text-decoration: none;
+            border-radius: var(--border-radius-medium);
+            font-size: var(--font-size-large);
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .contacto a:hover {
+            background-color: #E0FFFF; /* Fondo azul muy claro al pasar el mouse */
+            color: var(--background-dark);
+        }
+
+        .contacto-detalles {
+            margin-top: var(--spacing-medium);
+            font-size: var(--font-size-large);
+            color: var(--text-medium);
+        }
+
+        .contacto-detalles p {
+            margin-bottom: var(--spacing-small);
+        }
+
+        .contacto-detalles i {
+            margin-right: var(--spacing-small);
+            color: var(--secondary-color);
+        }
+
+        .boton-whatsapp {
+            display: inline-block;
+            background-color: #25d366; /* Color de WhatsApp (se mantiene) */
+            color: var(--text-light);
+            padding: var(--spacing-medium) var(--spacing-large);
+            text-decoration: none;
+            border-radius: var(--border-radius-medium);
+            font-weight: bold;
+            margin-top: var(--spacing-large);
+            transition: background-color 0.3s ease;
+        }
+
+        .boton-whatsapp:hover {
+            background-color: #128c7e;
+        }
+
+        footer {
+            text-align: center;
+            padding: var(--spacing-medium);
+            background-color: var(--background-dark-secondary);
+            color: var(--text-medium);
+            font-size: var(--font-size-small);
+            margin-top: var(--spacing-large);
+        }
+
+        /* Adaptación para dispositivos móviles (se mantiene) */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header img {
+                margin-right: 0;
+            }
+
+            nav {
+                margin-top: var(--spacing-small);
+            }
+
+            nav a {
+                display: block;
+                margin: var(--spacing-small) auto;
+                width: 80%;
+                text-align: center;
+            }
+
+            ul.ventajas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul.ventajas li {
+                width: 90%;
+                text-align: center;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .precios table {
+                font-size: 0.9rem;
+                width: 95%;
+            }
+
+            .precios th, .precios td {
+                padding: var(--spacing-small);
+            }
+
+            .contacto-detalles {
+                font-size: var(--font-size-regular);
+            }
+
+            .boton-whatsapp {
+                font-size: var(--font-size-regular);
+                padding: var(--spacing-small) var(--spacing-medium);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/logo.jpeg" alt="Logo de Virtual-Shop PY">
+        <h1>Virtual-Shop PY</h1>
+    </header>
+
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#precios">Precios</a>
+        <a href="#redes">Redes Sociales</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En <strong>Virtual-Shop PY</strong>, somos más que una tienda online de camisetas para hombres: somos una comunidad apasionada por el estilo, la comodidad y la autenticidad. Nuestro compromiso va más allá de vender ropa, buscamos brindarte una experiencia de compra cercana, amigable y totalmente confiable. Estamos en Asunción, pero llegamos a vos estés donde estés.</p>
+        <div class="ventajas-title">Ventajas de comprar con nosotros</div>
+        <ul class="ventajas">
+            <li><i class="fas fa-tshirt"></i>Diseños exclusivos y varoniles</li>
+            <li><i class="fas fa-dollar-sign"></i>Precios competitivos</li>
+            <li><i class="fas fa-shipping-fast"></i>Envíos rápidos y seguros</li>
+            <li><i class="fas fa-user-check"></i>Atención personalizada</li>
+        </ul>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+        <h2>Catálogo</h2>
+        <div class="galeria">
+            <div class="producto-cuadro">
+                <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo1.jpg" alt="Camiseta 1">
+            </div>
+            <div class="producto-cuadro">
+                <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo2.jpg" alt="Camiseta 2">
+            </div>
+            <div class="producto-cuadro">
+                <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo3.jpg" alt="Camiseta 3">
+            </div>
+            <div class="producto-cuadro">
+                <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo4.jpg" alt="Camiseta 4">
+            </div>
+            <div class="producto-cuadro">
+                <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo5.jpg" alt="Camiseta 5">
+            </div>
+            <div class="producto-cuadro">
+                <img src="https://raw.githubusercontent.com/VirtualshopPY/Virtual-shop/main/catalogo6.jpg" alt="Camiseta 6">
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="precios">
+        <h2>Precios</h2>
+        <table>
+            <caption>Lista de Precios de Nuestras Camisetas</caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Camiseta Clásica</td>
+                    <td>Gs. 45.000</td>
+                </tr>
+                <tr>
+                    <td>Camiseta Estampada</td>
+                    <td>Gs. 55.000</td>
+                </tr>
+                <tr>
+                    <td>Camiseta Premium</td>
+                    <td>Gs. 65.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="redes" class="redes">
+        <h2>Seguinos en nuestras redes</h2>
+        <a href="https://www.instagram.com/virtualshopp_py" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>Instagram</a>
+        <a href="https://www.facebook.com/share/1EFkKg4MGk" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i>Facebook</a>
+        <a href="https://www.tiktok.com/@virtualshopppy" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i>TikTok</a>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>¡Contactanos!</h2>
+        <div class="contacto-detalles">
+            <p><i class="fas fa-phone"></i> Teléfono: <a href="tel:+595982907598">+595 982 907598</a></p>
+            <p><i class="fas fa-envelope"></i> Email: info@virtualshoppy.com (ejemplo)</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Asunción,
